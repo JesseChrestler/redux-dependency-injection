@@ -4,6 +4,7 @@ Redux Middleware that simulates what angular does for dependency injection.
 ## Basic Usage
 
 ### Store configuration
+add all your injectable services here.
 ```sh
 import ajaxService from  "some/file/path/where/service/is";
 createStore(
@@ -16,6 +17,7 @@ createStore(
 ```
 
 ###Action Setup
+order doesn't matter as long as the names match the injected names
 ```sh
 export function login (user){
   return function(dispatch, ajaxService){
@@ -31,6 +33,7 @@ export function login (user){
 ```
 
 ### Service Setup
+we pass the dipatch function to the service to allow our service to dipatch it's own set of actions internally. 
 ```sh
 export default class AjaxService {
   constructor(dispatch){
