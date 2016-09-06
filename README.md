@@ -21,7 +21,7 @@ order doesn't matter as long as the names match the injected names
 ```sh
 export function login (user){
   return function(dispatch, ajaxService){
-    ajaxService.get("authenticate", user)
+    ajaxService.post("authenticate", user)
     .then((response)=>{
       dispatch(loginSuccess(response));
     })
