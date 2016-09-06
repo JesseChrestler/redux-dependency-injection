@@ -1,4 +1,4 @@
-//source from http://stackoverflow.com/a/14660057
+//source from http://stackoverflow.com/a/31194949
 const getArguments = (func) => {
     return (func + '')
         .replace(/[/][/].*$/mg, '') // strip single-line comments
